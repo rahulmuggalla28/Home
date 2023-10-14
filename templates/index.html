@@ -1,0 +1,85 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction</title>
+</head>
+<body>
+    <h1>House Price Prediction</h1>
+    <form action="/predict" method="post">
+        <label>No of Bedrooms</label>
+        <input type="number" name="bedrooms" required><br><br>
+
+        <label>No of Bathrooms</label>
+        <input type="number" name="bathrooms" required><br><br>
+
+        <label>Location</label>
+        <select name="location" required>
+            <option value="0">AGIRIPALLI</option>
+            <option value="1">Ajit Singh Nagar</option>
+            <option value="3">Ashok Nagar</option>
+            <option value="4">Auto Nagar</option>
+            <option value="5">Ayyappa Nagar</option>
+            <option value="6">Bandar Road</option>
+            <option value="7">Benz Circle</option>
+            <option value="9">Bhavanipuram</option>
+            <option value="10">Currency Nagar</option>
+            <option value="12">Enikepadu</option>
+            <option value="15">Gollapudi</option>
+            <option value="18">Governor Peta</option>
+            <option value="19">Gudavalli</option>
+            <option value="20">Gunadala</option>
+            <option value="22">Guru Nanak Colony</option>
+            <option value="23">Ibrahimpatnam</option>
+            <option value="29">Kanuru</option>
+            <option value="32">Krishna Lanka</option>
+            <option value="33">Labbipet</option>
+            <option value="34">Madhuranagar</option>
+            <option value="35">Mangalagiri</option>
+            <option value="48">Patamata</option>
+            <option value="52">Poranki</option>
+            <option value="55">Ramavarapadu</option>
+            <option value="62">Tadigadapa</option>
+        </select><br><br>
+
+        <label>Size in Sqft</label>
+        <input type="number" name="size" required><br><br>
+
+        <label>Status</label>
+        <select name="status" required>
+            <option value="0">New</option>
+            <option value="1">Ready to move</option>
+            <option value="2">Resale</option>
+            <option value="3">Under Construction</option>
+        </select><br><br>
+
+        <label>Facing Direction</label>
+        <select name="facing" required>
+            <option value="0">East</option>
+            <option value="2">North</option>
+            <option value="3">NorthEast</option>
+            <option value="4">NorthWest</option>
+            <option value="5">South</option>
+            <option value="6">SouthEast</option>
+            <option value="7">SouthWest</option>
+            <option value="8">West</option>
+            <option value="1">None</option>
+        </select><br><br>
+
+        <label>Property Type</label>
+        <select name="type" required>
+            <option value="0">Apartment</option>
+            <option value="1">Independent Floor</option>
+            <option value="2">Independent House</option>
+            <option value="3">Residential Plot</option>
+            <option value="4">Studio Apartment</option>
+            <option value="5">Villa</option>
+        </select><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    <h2>Predicted Results</h2>
+    <p>Predicted House Price : ₹ {{prediction}} Lakhs</p>
+</body>
+</html>
